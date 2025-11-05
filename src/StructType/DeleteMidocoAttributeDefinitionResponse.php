@@ -19,33 +19,33 @@ class DeleteMidocoAttributeDefinitionResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - minOccurs: 0
      * - ref: MidocoSystemAttributeDefinition
-     * @var \Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO|null
+     * @var \Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition|null
      */
-    protected ?\Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO $MidocoSystemAttributeDefinition = null;
+    protected ?\Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition $MidocoSystemAttributeDefinition = null;
     /**
      * Constructor method for DeleteMidocoAttributeDefinitionResponse
      * @uses DeleteMidocoAttributeDefinitionResponse::setMidocoSystemAttributeDefinition()
-     * @param \Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition
+     * @param \Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition
      */
-    public function __construct(?\Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition = null)
+    public function __construct(?\Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition = null)
     {
         $this
             ->setMidocoSystemAttributeDefinition($midocoSystemAttributeDefinition);
     }
     /**
      * Get MidocoSystemAttributeDefinition value
-     * @return \Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO|null
+     * @return \Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition|null
      */
-    public function getMidocoSystemAttributeDefinition(): ?\Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO
+    public function getMidocoSystemAttributeDefinition(): ?\Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition
     {
         return $this->MidocoSystemAttributeDefinition;
     }
     /**
      * Set MidocoSystemAttributeDefinition value
-     * @param \Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition
+     * @param \Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition
      * @return \Pggns\MidocoApi\OrderglobalSD\StructType\DeleteMidocoAttributeDefinitionResponse
      */
-    public function setMidocoSystemAttributeDefinition(?\Pggns\MidocoApi\OrderglobalSD\StructType\AttributeDefinitionDTO $midocoSystemAttributeDefinition = null): self
+    public function setMidocoSystemAttributeDefinition(?\Pggns\MidocoApi\OrderglobalSD\StructType\MidocoSystemAttributeDefinition $midocoSystemAttributeDefinition = null): self
     {
         $this->MidocoSystemAttributeDefinition = $midocoSystemAttributeDefinition;
         

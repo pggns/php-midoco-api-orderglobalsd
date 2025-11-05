@@ -35,6 +35,11 @@ class DbiDefDTO extends AbstractStructBase
      */
     protected ?string $dbiKey = null;
     /**
+     * The defaultValue
+     * @var string|null
+     */
+    protected ?string $defaultValue = null;
+    /**
      * The description
      * @var string|null
      */
@@ -85,6 +90,11 @@ class DbiDefDTO extends AbstractStructBase
      */
     protected ?string $rule = null;
     /**
+     * The selection
+     * @var string|null
+     */
+    protected ?string $selection = null;
+    /**
      * The type
      * @var string|null
      */
@@ -95,6 +105,7 @@ class DbiDefDTO extends AbstractStructBase
      * @uses DbiDefDTO::setCreationTimestamp()
      * @uses DbiDefDTO::setCreationUser()
      * @uses DbiDefDTO::setDbiKey()
+     * @uses DbiDefDTO::setDefaultValue()
      * @uses DbiDefDTO::setDescription()
      * @uses DbiDefDTO::setItemType()
      * @uses DbiDefDTO::setMapping()
@@ -105,11 +116,13 @@ class DbiDefDTO extends AbstractStructBase
      * @uses DbiDefDTO::setModifyUser()
      * @uses DbiDefDTO::setPosition()
      * @uses DbiDefDTO::setRule()
+     * @uses DbiDefDTO::setSelection()
      * @uses DbiDefDTO::setType()
      * @param string $ccNo
      * @param string $creationTimestamp
      * @param int $creationUser
      * @param string $dbiKey
+     * @param string $defaultValue
      * @param string $description
      * @param string $itemType
      * @param string $mapping
@@ -120,15 +133,17 @@ class DbiDefDTO extends AbstractStructBase
      * @param int $modifyUser
      * @param int $position
      * @param string $rule
+     * @param string $selection
      * @param string $type
      */
-    public function __construct(?string $ccNo = null, ?string $creationTimestamp = null, ?int $creationUser = null, ?string $dbiKey = null, ?string $description = null, ?string $itemType = null, ?string $mapping = null, ?string $matchCriteria = null, ?int $maxlength = null, ?int $minlength = null, ?string $modifyTimestamp = null, ?int $modifyUser = null, ?int $position = null, ?string $rule = null, ?string $type = null)
+    public function __construct(?string $ccNo = null, ?string $creationTimestamp = null, ?int $creationUser = null, ?string $dbiKey = null, ?string $defaultValue = null, ?string $description = null, ?string $itemType = null, ?string $mapping = null, ?string $matchCriteria = null, ?int $maxlength = null, ?int $minlength = null, ?string $modifyTimestamp = null, ?int $modifyUser = null, ?int $position = null, ?string $rule = null, ?string $selection = null, ?string $type = null)
     {
         $this
             ->setCcNo($ccNo)
             ->setCreationTimestamp($creationTimestamp)
             ->setCreationUser($creationUser)
             ->setDbiKey($dbiKey)
+            ->setDefaultValue($defaultValue)
             ->setDescription($description)
             ->setItemType($itemType)
             ->setMapping($mapping)
@@ -139,6 +154,7 @@ class DbiDefDTO extends AbstractStructBase
             ->setModifyUser($modifyUser)
             ->setPosition($position)
             ->setRule($rule)
+            ->setSelection($selection)
             ->setType($type);
     }
     /**
@@ -230,6 +246,29 @@ class DbiDefDTO extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($dbiKey, true), gettype($dbiKey)), __LINE__);
         }
         $this->dbiKey = $dbiKey;
+        
+        return $this;
+    }
+    /**
+     * Get defaultValue value
+     * @return string|null
+     */
+    public function getDefaultValue(): ?string
+    {
+        return $this->defaultValue;
+    }
+    /**
+     * Set defaultValue value
+     * @param string $defaultValue
+     * @return \Pggns\MidocoApi\OrderglobalSD\StructType\DbiDefDTO
+     */
+    public function setDefaultValue(?string $defaultValue = null): self
+    {
+        // validation for constraint: string
+        if (!is_null($defaultValue) && !is_string($defaultValue)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($defaultValue, true), gettype($defaultValue)), __LINE__);
+        }
+        $this->defaultValue = $defaultValue;
         
         return $this;
     }
@@ -460,6 +499,29 @@ class DbiDefDTO extends AbstractStructBase
             throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($rule, true), gettype($rule)), __LINE__);
         }
         $this->rule = $rule;
+        
+        return $this;
+    }
+    /**
+     * Get selection value
+     * @return string|null
+     */
+    public function getSelection(): ?string
+    {
+        return $this->selection;
+    }
+    /**
+     * Set selection value
+     * @param string $selection
+     * @return \Pggns\MidocoApi\OrderglobalSD\StructType\DbiDefDTO
+     */
+    public function setSelection(?string $selection = null): self
+    {
+        // validation for constraint: string
+        if (!is_null($selection) && !is_string($selection)) {
+            throw new InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($selection, true), gettype($selection)), __LINE__);
+        }
+        $this->selection = $selection;
         
         return $this;
     }
